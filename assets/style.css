@@ -150,6 +150,7 @@ nav .links li:last-child a {
     left: 0;
     top: 80px;
     width: 100%;
+    z-index: 999;
     display: none;
     font-size: 20px;
     padding-top: 50px;
