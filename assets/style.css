@@ -253,7 +253,6 @@ Main area
 
 @media (min-width: 768px) {
   main {
-    height: 1000px;
     overflow: hidden;
     position: relative;
   }
@@ -344,5 +343,76 @@ Main area
   }
   .hero-txt::before {
     left: 15px;
+  }
+}
+
+/* Different section  */
+
+.different {
+  padding: 368px 0 164px;
+}
+.different h2,
+.different h3 {
+  line-height: 1;
+  font-weight: 400;
+  color: var(--main);
+  font-family: "DM Serif Display";
+}
+.different h2 {
+  font-size: 4.5em;
+  position: relative;
+  margin-bottom: 100px;
+}
+.different h2::before {
+  left: 0;
+  top: -60px;
+  content: "";
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  background-color: var(--light-blue);
+}
+.different h3 {
+  font-size: 1.5em;
+  margin: 38px 0 23px;
+}
+.different p {
+  padding: 0px 8px;
+  color: var(--gray);
+}
+@media (min-width: 992px) {
+  .different h3 {
+    font-size: 2em;
+  }
+  .different p {
+    padding-right: 40px;
+  }
+}
+.different .icon {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background-color: var(--light-blue);
+}
+@media (max-width: 767px) {
+  .different {
+    padding: 190px 0 144px;
+  }
+  .different h2 {
+    font-size: 2.5em;
+    margin-bottom: 70px;
+  }
+  .different h2::before {
+    left: 50%;
+    top: -36px;
+    margin: auto;
+    transform: translateX(-50%);
+  }
+  .different .icon {
+    margin: auto;
+  }
+  .different .boxes {
+    gap: 60px;
+    flex-direction: column;
   }
 }
