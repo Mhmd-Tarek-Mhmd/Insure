@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insure</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=DM+Serif+Display&display=swap"
+    />
+  </head>
+  <body>
+    <nav class="center-flex">
+      <div class="container space-between-flex">
+        <a href="/" class="logo" aria-label="Insure logo">
+          <img src="assets/images/logo.svg" alt="" />
+        </a>
+
+        <button
+          class="menu-toggler"
+          aria-label="Show menu"
+          aria-controls="menu"
+          onclick="menuToggler(event)"
+        >
+          <img src="assets/images/nav/icon-hamburger.svg" alt="" />
+        </button>
+
+        <div class="links">
+          <ul class="container center-flex" id="menu">
+            <li><a href="/">How we work</a></li>
+            <li><a href="/">Blog</a></li>
+            <li><a href="/">Account</a></li>
+            <li><a href="/">View plans</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      function menuToggler(e) {
+        e.target.nextElementSibling.classList.toggle("show");
+        if (e.target.nextElementSibling.classList.contains("show")) {
+          e.target.ariaLabel = "Hide menu";
+          e.target.firstElementChild.src = "assets/images/nav/icon-close.svg";
+        } else {
+          e.target.ariaLabel = "Show menu";
+          e.target.firstElementChild.src =
+            "assets/images/nav/icon-hamburger.svg";
+        }
+      }
+    </script>
+  </body>
+</html>
