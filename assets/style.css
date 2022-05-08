@@ -416,3 +416,49 @@ Main area
     flex-direction: column;
   }
 }
+
+/* Work section  */
+
+.work {
+  height: 250px;
+  margin-bottom: 150px;
+  color: var(--secondary);
+  background: url(images/work/bg-pattern-desktop.svg) no-repeat top right
+    var(--bg);
+}
+.work h2 {
+  font: 400 2.5em/1 "DM Serif Display";
+}
+.work a {
+  width: 146px;
+  height: 40px;
+  display: block;
+  font-size: 14px;
+  line-height: 35px;
+  border: 2px solid;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  will-change: color, background-color;
+}
+.work a:hover,
+.work a:focus-visible {
+  color: var(--main);
+  background-color: var(--secondary);
+}
+@media (max-width: 767px) {
+  .work {
+    margin: auto;
+    height: 344px;
+    max-width: 327px;
+    margin-bottom: 140px;
+    background-image: url(images/work/bg-pattern-mobile.svg);
+  }
+  .work > .container {
+    gap: 60px;
+    flex-direction: column;
+  }
+  .work a {
+    margin: 0 auto;
+  }
+}
