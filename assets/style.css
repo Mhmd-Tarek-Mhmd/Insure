@@ -18,6 +18,13 @@ body {
   background-color: white;
   font-family: "Karla", sans-serif;
 }
+@media (max-width: 767px) {
+  body {
+    margin: 0 auto;
+    max-width: 375px;
+    text-align: center;
+  }
+}
 ul {
   list-style: none;
 }
@@ -180,5 +187,161 @@ nav .links li:last-child a {
     color: var(--main);
     text-decoration: none;
     background-color: var(--secondary);
+  }
+}
+
+/* 
+Main area
+*/
+
+.hero {
+  position: relative;
+  color: var(--secondary);
+}
+.hero h1 {
+  font: 400 2.8em/1 "DM Serif Display";
+}
+.hero-txt p {
+  line-height: 1.6;
+  margin: 25px 0 30px;
+}
+.hero a {
+  width: 146px;
+  height: 40px;
+  display: block;
+  line-height: 35px;
+  border: 2px solid;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  will-change: color, background-color;
+}
+.hero a:hover,
+.hero a:focus-visible {
+  color: var(--main);
+  background-color: var(--secondary);
+}
+
+@media (max-width: 767px) {
+  .hero > .container {
+    padding: 0;
+    display: grid;
+    grid-template-rows: 451px 500px;
+  }
+  .hero::before {
+    right: 0;
+    bottom: -180px;
+    position: absolute;
+    content: url("./images/hero/bg-pattern-intro-right-mobile.svg");
+  }
+  .hero a {
+    margin: auto;
+  }
+  .hero-img {
+    height: 100%;
+    max-width: 100%;
+  }
+  .hero-txt {
+    display: grid;
+    padding: 0 28px;
+    place-items: center;
+    background: url("./images/hero/bg-pattern-intro-left-mobile.svg") no-repeat
+      top left var(--bg);
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    height: 1000px;
+    overflow: hidden;
+    position: relative;
+  }
+  main::before {
+    right: 0;
+    top: -83px;
+    z-index: 1;
+    position: absolute;
+    content: url(./images/hero/bg-pattern-intro-right-desktop.svg);
+  }
+  .hero {
+    height: 600px;
+    background-color: var(--bg);
+  }
+  .hero::before {
+    left: 0;
+    bottom: -333px;
+    position: absolute;
+    content: url(./images/hero/bg-pattern-intro-left-desktop.svg);
+  }
+  .hero > .container {
+    gap: 10px;
+    height: 100%;
+    display: grid;
+    overflow: hidden;
+    position: relative;
+    align-content: center;
+    justify-content: space-between;
+    grid-template-columns: 350px calc(100% - 350px);
+  }
+  .hero-img {
+    z-index: 2;
+    width: 100%;
+    position: relative;
+  }
+  .hero h1 {
+    font-size: 3em;
+  }
+  .hero-txt {
+    grid-row: 1;
+    display: grid;
+    position: relative;
+    align-content: center;
+  }
+  .hero-txt::before {
+    top: 0;
+    left: 0;
+    content: "";
+    height: 1px;
+    width: 150px;
+    position: absolute;
+    background-color: var(--secondary);
+  }
+}
+
+@media (min-width: 992px) {
+  .hero > .container {
+    gap: 20px;
+    top: 105px;
+    position: relative;
+    grid-template-columns: 450px calc(100% - 450px);
+  }
+  .hero h1 {
+    font-size: 3.75em;
+  }
+  .hero-txt {
+    display: block;
+  }
+  .hero-txt > div {
+    margin-top: 90px;
+  }
+}
+
+@media (min-width: 1200px) {
+  main::before {
+    z-index: 3;
+  }
+  .hero > .container {
+    gap: 35px;
+    grid-template-columns: 535px 540px;
+  }
+  .hero h1 {
+    width: 480px;
+    font-size: 4.3em;
+  }
+  .hero-txt {
+    position: static;
+  }
+  .hero-txt::before {
+    left: 15px;
   }
 }
