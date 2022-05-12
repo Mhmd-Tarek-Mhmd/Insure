@@ -349,6 +349,34 @@ nav .links {
 .different {
   padding: 368px 0 164px;
 }
+.different .icon {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background-color: var(--light-blue);
+}
+@media (max-width: 991px) {
+  .different {
+    text-align: center;
+  }
+  .different .icon {
+    margin: auto;
+  }
+  .different .boxes {
+    gap: 15px;
+  }
+}
+
+.different .boxes {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .different .boxes {
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .different h2,
 .different h3 {
   line-height: 1;
@@ -370,28 +398,6 @@ nav .links {
   position: absolute;
   background-color: var(--light-blue);
 }
-.different h3 {
-  font-size: 1.5em;
-  margin: 38px 0 23px;
-}
-.different p {
-  padding: 0px 8px;
-  color: var(--gray);
-}
-@media (min-width: 992px) {
-  .different h3 {
-    font-size: 2em;
-  }
-  .different p {
-    padding-right: 40px;
-  }
-}
-.different .icon {
-  width: 86px;
-  height: 86px;
-  border-radius: 50%;
-  background-color: var(--light-blue);
-}
 @media (max-width: 767px) {
   .different {
     padding: 190px 0 144px;
@@ -406,14 +412,25 @@ nav .links {
     margin: auto;
     transform: translateX(-50%);
   }
-  .different .icon {
-    margin: auto;
-  }
   .different .boxes {
     gap: 60px;
-    flex-direction: column;
   }
 }
+
+.different h3 {
+  font-size: 1.5em;
+  margin: 38px 0 23px;
+}
+.different p {
+  line-height: 1.6;
+  color: var(--gray);
+}
+@media (min-width: 992px) {
+  .different p {
+    padding-right: 20px;
+  }
+}
+
 
 /* Work section  */
 
