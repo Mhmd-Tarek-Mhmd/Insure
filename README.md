@@ -5,4 +5,4 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 ## Links
 
 - Live Site [URL](https://mhmd-tarek-mhmd.github.io/Insure)
-- Solution [URL](https://www.frontendmentor.io/solutions/insure-)
+- Solution [URL](https://www.frontendmentor.io/solutions/insure-BkahSY5I5)
