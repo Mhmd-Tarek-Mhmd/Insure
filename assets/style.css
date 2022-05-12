@@ -452,7 +452,8 @@ nav .links {
 footer {
   padding: 66px 0;
   color: var(--gray);
-  background: url(images/footer/bg-pattern-footer-desktop.svg);
+  background: url(images/footer/bg-pattern-footer-desktop.svg) no-repeat top
+    left var(--secondary);
 }
 footer a,
 footer strong {
