@@ -54,6 +54,45 @@ button {
   justify-content: space-between;
 }
 
+.cta {
+  width: 146px;
+  height: 40px;
+  display: block;
+  font-size: 14px;
+  border: 2px solid;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+@media (max-width: 767px) {
+  .cta {
+    margin: 0 auto;
+  }
+}
+
+.cta-primary {
+  color: var(--secondary);
+  will-change: color, background-color;
+}
+.cta-primary:hover,
+.cta-primary:focus-visible {
+  color: var(--main);
+  background-color: var(--secondary);
+}
+
+.cta-invert {
+  font-weight: 700;
+  color: var(--main);
+  will-change: font-weight, color, border-color, background-color;
+}
+.cta-invert:hover,
+.cta-invert:focus-visible {
+  font-weight: 400;
+  color: var(--secondary);
+  background-color: var(--main);
+}
+
 /*
   Grid
 */
@@ -97,41 +136,22 @@ nav .links {
   text-transform: uppercase;
   color: var(--light-blue);
 }
-nav .links li:last-child a {
-  display: block;
-  border: 2px solid;
-  text-align: center;
-  transition: background-color 0.3s;
-}
+
 @media (min-width: 768px) {
   nav .links .container {
     gap: 28px;
     margin: 0;
     padding: 0;
     max-width: initial;
-    font-weight: 700;
-    font-size: 14px;
   }
   nav .menu-toggler {
     display: none;
   }
-  nav .links a:hover,
-  nav .links a:focus-visible {
+  nav .links a:not(.cta):hover,
+  nav .links a:not(.cta):focus-visible {
+    font-size: 14px;
+    font-weight: 700;
     color: var(--main);
-  }
-  nav .links li:last-child,
-  nav .links li:last-child a {
-    height: 40px;
-    width: 146px;
-    margin-left: 5px;
-    line-height: 40px;
-    color: var(--main);
-    will-change: color, border-color, background-color;
-  }
-  nav .links li:last-child a:hover,
-  nav .links li:last-child a:focus-visible {
-    color: var(--secondary);
-    background-color: var(--bg);
   }
 }
 @media (max-width: 767px) {
@@ -170,24 +190,21 @@ nav .links li:last-child a {
     gap: 51px;
     flex-direction: column;
   }
-  nav .links a:hover,
-  nav .links a:focus-visible {
+  nav .links a:not(.cta):hover,
+  nav .links a:not(.cta):focus-visible {
     outline: none;
     text-decoration: underline;
   }
-  nav .links li:last-child,
-  nav .links li:last-child a {
+  nav .links li:last-child {
+    width: 100%;
+  }
+  nav .links .cta,
+  nav .links .cta {
     width: 100%;
     height: 56px;
     line-height: 56px;
     margin-top: -11px;
-    will-change: color, background-color;
-  }
-  nav .links li:last-child a:hover,
-  nav .links li:last-child a:focus-visible {
-    color: var(--main);
-    text-decoration: none;
-    background-color: var(--secondary);
+    font-size: inherit;
   }
 }
 
@@ -206,22 +223,6 @@ nav .links li:last-child a {
   line-height: 1.6;
   margin: 25px 0 30px;
 }
-.hero a {
-  width: 146px;
-  height: 40px;
-  display: block;
-  line-height: 35px;
-  border: 2px solid;
-  text-align: center;
-  text-transform: uppercase;
-  transition: background-color 0.3s;
-  will-change: color, background-color;
-}
-.hero a:hover,
-.hero a:focus-visible {
-  color: var(--main);
-  background-color: var(--secondary);
-}
 
 @media (max-width: 767px) {
   .hero > .container {
@@ -234,9 +235,6 @@ nav .links li:last-child a {
     bottom: -180px;
     position: absolute;
     content: url("./images/hero/bg-pattern-intro-right-mobile.svg");
-  }
-  .hero a {
-    margin: auto;
   }
   .hero-img {
     height: 100%;
@@ -429,22 +427,9 @@ nav .links li:last-child a {
 .work h2 {
   font: 400 2.5em/1 "DM Serif Display";
 }
-.work a {
-  width: 146px;
-  height: 40px;
-  display: block;
-  font-size: 14px;
-  line-height: 35px;
-  border: 2px solid;
-  text-align: center;
-  text-transform: uppercase;
-  transition: background-color 0.3s;
-  will-change: color, background-color;
-}
-.work a:hover,
-.work a:focus-visible {
-  color: var(--main);
-  background-color: var(--secondary);
+.work .cta {
+  width: 160px;
+  font-weight: 700;
 }
 @media (max-width: 767px) {
   .work {
@@ -457,9 +442,6 @@ nav .links li:last-child a {
   .work > .container {
     gap: 60px;
     flex-direction: column;
-  }
-  .work a {
-    margin: 0 auto;
   }
 }
 
