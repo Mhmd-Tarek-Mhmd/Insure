@@ -59,9 +59,11 @@ button {
   height: 40px;
   display: block;
   font-size: 14px;
+  font-weight: 700;
   border: 2px solid;
   line-height: 35px;
   text-align: center;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: background-color 0.3s;
 }
@@ -82,13 +84,11 @@ button {
 }
 
 .cta-invert {
-  font-weight: 700;
   color: var(--main);
-  will-change: font-weight, color, border-color, background-color;
+  will-change: color, border-color, background-color;
 }
 .cta-invert:hover,
 .cta-invert:focus-visible {
-  font-weight: 400;
   color: var(--secondary);
   background-color: var(--main);
 }
